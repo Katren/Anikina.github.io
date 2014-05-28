@@ -32,10 +32,13 @@ function init() {
         
         var placemark = new ymaps.Placemark([x, y], {
 			content: text,
-			balloonContent: text + " тут!Э"
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'goold',
+			preset: 'twirl#redStretchyIcon',
 		});
 		myMap.geoObjects.add(placemark);
-		i = i + 1; // i++;
+		i = i + 1; // ++;
 	}
     var gold_button = new ymaps.control.Button('Золото');
     
