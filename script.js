@@ -34,16 +34,6 @@ function init() {
 			content: text,
 			balloonContent: text + " тут!"
 		}, {
-            iconLayout: 'twirl#violetIcon',
-            iconImageSize: [size, size],
-            iconImageOffset: [-size/2, -size/2],
-            visible: false
-        });
-        
-        if (type == 'Золото') {
-            gold.push(placemark);
-        } 
-    }
 
     putPlacemarksOnMap();
 
