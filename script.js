@@ -36,6 +36,7 @@ function init() {
 		},{
 			iconContent: 'goold',
 			preset: 'twirl#redStretchyIcon',
+		visible: false,
 		});
 		myMap.geoObjects.add(placemark);
 		i = i + 1; // ++;
