@@ -34,8 +34,7 @@ function init() {
 			content: text,
 			balloonContent: text + " тут!"
 		}, {
-            iconLayout: 'default#image',
-            iconImageHref: '/maps/doc/jsapi/2.x/dg/images/sprite.png',
+            iconLayout: 'twirl#violetIcon',
             iconImageSize: [size, size],
             iconImageOffset: [-size/2, -size/2],
             visible: false
