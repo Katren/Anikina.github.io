@@ -4,7 +4,14 @@ var myMap;
 
 var gold = [];
 var goldp=[];
-var placemarks = [gold, goldp];
+var goldPM = [];
+var goldCuprum = [];
+var goldSUrma = [];
+var goldRTyt = [];
+var goldCobalt = [];
+var goldVolframe = [];
+var goldVismut = [];
+var placemarks = [goldp, gold, goldPM,goldCuprum, goldSUrma,goldRTyt,goldCobalt,goldVolframe,goldVismut ];
 
 function init() {
     myMap = new ymaps.Map("map", {
@@ -152,3 +159,4 @@ var data = [
 	return data;	
 }
 br
+,
