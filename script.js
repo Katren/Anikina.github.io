@@ -35,7 +35,7 @@ function init() {
 			balloonContent: text + " тут!"
 		}, {
             iconLayout: 'default#image',
-            iconImageHref: getIcon(type),
+            iconImageHref: '/maps/doc/jsapi/2.x/dg/images/sprite.png',
             iconImageSize: [size, size],
             iconImageOffset: [-size/2, -size/2],
             visible: false
@@ -83,11 +83,6 @@ function hideGroup(group) {
     }
 }
 
-function getIcon(type) {
-        if (type == 'Золото') {
-            return 'pure.png';
-        } 
-}
 
 function putPlacemarksOnMap() {
     for (var i = 0; i < placemarks.length; i++) {
