@@ -30,7 +30,7 @@ function init() {
 		var text = row_data[0];
         var size = Number(row_data[7]) * 10;
         
-        vvar placemark = new ymaps.Placemark([x, y], {
+        var placemark = new ymaps.Placemark([x, y], {
 			content: text,
 			balloonContent: text + " тут!Э"
 		});
