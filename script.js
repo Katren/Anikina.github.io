@@ -33,7 +33,7 @@ function init() {
         var placemark = new ymaps.Placemark([x, y], {
 			content: text,
 			balloonContent: text + " тут!"
-		}, {
+		}, 
 
     putPlacemarksOnMap();
 
