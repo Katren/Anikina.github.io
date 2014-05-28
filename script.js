@@ -35,7 +35,7 @@ function init() {
 			balloonContent: text + " тут!"
 		},{
 			iconContent: 'goold',
-			preset: 'twirl#redStretchyIcon',
+			preset: 'twirl#invertedDarkorangeClusterIcons',
 			iconImageSize: [size, size],
             		iconImageOffset: [-size/2, -size/2],
 		visible: false,
