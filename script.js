@@ -30,13 +30,13 @@ function init() {
 		var text = row_data[0];
         var size = Number(row_data[7]) * 10;
         
-        var placemark = new ymaps.Placemark([x, y], {
+        vvar placemark = new ymaps.Placemark([x, y], {
 			content: text,
-			balloonContent: text + " тут!"
-		}, 
-
-    putPlacemarksOnMap();
-
+			balloonContent: text + " тут!Э"
+		});
+		myMap.geoObjects.add(placemark);
+		i = i + 1; // i++;
+	}
     var gold_button = new ymaps.control.Button('Золото');
     
 
