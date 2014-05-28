@@ -38,11 +38,13 @@ function init() {
 			preset: 'twirl#redStretchyIcon',
 		visible: false,
 		});
-		putPlacemarksOnMap();
-		}
+		
+		
 	if (type == 'Золото') {
             gold.push(placemark);
         } 
+    }
+        putPlacemarksOnMap();
     var gold_button = new ymaps.control.Button('Золото');
     
 
