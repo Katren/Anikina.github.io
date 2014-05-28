@@ -292,6 +292,3 @@ var data = [
 ];
 	return data;	
 }
-br
-,
-/icon/Au04.pngbr
