@@ -58,6 +58,76 @@ function init() {
             		iconImageOffset: [-size/2, -size/2],
 		visible: false,
 		});
+		var placemark2 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#bowlingIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark3 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#metroMoscowIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark4 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#campingIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark5 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#shipIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark6 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#keyMasterIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark7 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#metroYekaterinburgIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
+		var placemark8 = new ymaps.Placemark([x, y], {
+			content: text,
+			balloonContent: text + " тут!"
+		},{
+			iconContent: 'gooldP',
+			preset: 'twirl#mushroomIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
+		visible: false,
+		});
 		
 	if (type == 'Золото') {
             gold.push(placemark);
@@ -65,14 +135,37 @@ function init() {
         else if (type == 'Золото (р)') {
             goldp.push(placemark1);
         }
+        else if (type == 'Золото,полиметаллы') {
+            goldPM.push(placemark2);
+	} else if (type == 'Золото, медь') {
+            goldCuprum.push(placemark3);			
+	} else if (type == 'Золото, сурьма') {
+            goldSUrma.push(placemark4);
+	} else if (type == 'Золото, ртуть') {
+            goldRTyt.push(placemark5);
+        } else if (type == 'Золото, кобальт') {
+            goldCobalt.push(placemark6);
+        } else if (type == 'Золото, вольфрам') {
+            goldVolframepush(placemark7);
+        } else if (type == 'Золото, висмут') {
+            goldVismut.push(placemark8);
+        }
     }
         putPlacemarksOnMap();
     var gold_button = new ymaps.control.Button('Золото');
     var goldp_button = new ymaps.control.Button('Золото (р)');
+    var goldPM_button = new ymaps.control.Button('Золото,полиметаллы');
+    var goldCuprum_button = new ymaps.control.Button('Золото, медь');
+    var goldSUrma_button = new ymaps.control.Button('Золото, сурьма');
+    var goldRTyt_button = new ymaps.control.Button('Золото, ртуть');
+    var goldCobalt_button = new ymaps.control.Button('Золото, кобальт');
+    var goldVolframe_button = new ymaps.control.Button('Золото, вольфрам');
+    var goldVismut_button = new ymaps.control.Button('Золото, висмут');
 
 
     var typeControls = new ymaps.control.Group({
-            items: [gold_button, goldp_button]
+            items: [gold_button, goldp_button, goldPM_button,  goldCuprum_button,goldSUrma_button,goldRTyt_button,goldCobalt_button,goldVolframe_button, goldVismut_button]
+
         }, {
             position: { left: 40 }
     });
@@ -89,7 +182,48 @@ function init() {
     goldp_button.events.add(['deselect'], function (e) {
         hideGroup(goldp);
     });
-
+    goldPM_button.events.add(['select'], function (e) {
+        showGroup(goldPM);
+    });
+    goldPM_button.events.add(['deselect'], function (e) {
+        hideGroup(goldPM);
+    });
+    goldCuprum_button.events.add(['select'], function (e) {
+        showGroup(goldCuprum);
+    });
+    goldCuprum_button.events.add(['deselect'], function (e) {
+        hideGroup(goldCuprum);
+    });
+    goldSUrma_button.events.add(['select'], function (e) {
+        showGroup(goldSUrma);
+    });
+    goldSUrma_button.events.add(['deselect'], function (e) {
+        hideGroup(goldSUrma);
+    });
+    goldRTyt_button.events.add(['select'], function (e) {
+        showGroup(goldRTyt);
+    });
+    goldRTyt_button.events.add(['deselect'], function (e) {
+        hideGroup(goldRTyt);
+    });
+    goldCobalt_button.events.add(['select'], function (e) {
+        showGroup(goldCobalt);
+    });
+    goldCobalt_button.events.add(['deselect'], function (e) {
+        hideGroup(goldCobalt);
+    });
+    goldVismut_button.events.add(['select'], function (e) {
+        showGroup(goldVismut);
+    });
+    goldVismut_button.events.add(['deselect'], function (e) {
+        hideGroup(goldVismut);
+    });
+    goldVolframe_button.events.add(['select'], function (e) {
+        showGroup(goldVolframe);
+    });
+    goldVolframe_button.events.add(['deselect'], function (e) {
+        hideGroup(goldVolframe);
+    });
     myMap.controls.add(typeControls);
 }
 
@@ -160,3 +294,4 @@ var data = [
 }
 br
 ,
+/icon/Au04.pngbr
