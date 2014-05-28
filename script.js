@@ -41,6 +41,9 @@ function init() {
 		myMap.geoObjects.add(placemark);
 		i = i + 1; // ++;
 	}
+	if (type == 'Золото') {
+            gold.push(placemark);
+        } 
     var gold_button = new ymaps.control.Button('Золото');
     
 
