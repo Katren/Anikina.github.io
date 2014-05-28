@@ -36,6 +36,8 @@ function init() {
 		},{
 			iconContent: 'goold',
 			preset: 'twirl#redStretchyIcon',
+			iconImageSize: [size, size],
+            		iconImageOffset: [-size/2, -size/2],
 		visible: false,
 		});
 		
